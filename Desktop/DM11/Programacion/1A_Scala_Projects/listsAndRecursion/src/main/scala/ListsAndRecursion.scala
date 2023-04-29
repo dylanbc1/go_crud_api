@@ -73,7 +73,7 @@ object ListsAndRecursion extends App{
 
   // PUNTO 3
   // recursive function that calculates the length of a list
-  def lengthOfList(list:List[List[Int]]) : Int =
+  def lengthOfList(list:List[?]) : Int =
     if(list.isEmpty)
       0
     else 1+lengthOfList(list.slice(0,list.length-1))
