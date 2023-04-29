@@ -1,0 +1,59 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="885B0B7B-3268-88A3-0393-99971BA18224" name="CATEGORÍA">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 15:57:00 UTC</createdTime>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<engineerTo>
+<item key="1E27EDD1-F5B6-2131-65CB-BD4ECCF19C7E" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="CATEGORÍA_ID" id="CA9BB9E0-311E-E4F2-4736-FF1BE79D4B80">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 15:57:06 UTC</createdTime>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<engineerTo>
+<item key="1E27EDD1-F5B6-2131-65CB-BD4ECCF19C7E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CATEGORÍA_NOMBRE" id="9B7A0336-B059-EC3C-F187-DB5DA2B26E9A">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 15:57:30 UTC</createdTime>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<engineerTo>
+<item key="1E27EDD1-F5B6-2131-65CB-BD4ECCF19C7E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="C116F015-055C-728A-089F-C0AE68CC0227" name="CATEGORÍA PK">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 15:57:29 UTC</createdTime>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<engineerTo>
+<item key="1E27EDD1-F5B6-2131-65CB-BD4ECCF19C7E" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>CA9BB9E0-311E-E4F2-4736-FF1BE79D4B80</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

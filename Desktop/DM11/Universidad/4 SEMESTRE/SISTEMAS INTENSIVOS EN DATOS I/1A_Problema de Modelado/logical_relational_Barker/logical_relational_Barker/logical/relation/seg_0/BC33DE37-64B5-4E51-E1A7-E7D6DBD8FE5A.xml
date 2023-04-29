@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="PRODUCTO_FEEDBACK" directorySegmentName="seg_0" id="BC33DE37-64B5-4E51-E1A7-E7D6DBD8FE5A">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-22 23:21:04 UTC</createdTime>
+<ownerDesignName>logical_relational_Barker</ownerDesignName>
+<engineerTo>
+<item key="6B86849D-3ECF-51CC-C8EA-97CC800B5166" value="true"/>
+</engineerTo>
+<sourcePk>22072AAA-F628-C398-1AF8-BD71809A7C2D</sourcePk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>F7B62B4A-F3B4-8ED1-2C45-CA7228A44802</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>400EEA93-E20F-8811-D228-64C3BE5F2448</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

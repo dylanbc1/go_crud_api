@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AC8C6D66-9162-270B-146C-6C633CBFF119" name="VENTA">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 18:03:17 UTC</createdTime>
+<generatorID>16EDA903-7BED-CECE-3824-3612A32EE090</generatorID>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="VENTA_ID" id="32DC171F-DA7F-CAB3-43BC-0D24EA27DE7E">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 18:03:17 UTC</createdTime>
+<generatorID>0D54EDC4-1060-5971-8EEB-27A9099906D3</generatorID>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VENTA_PRECIO_TOTAL" id="D1484698-6B3C-87DC-F270-0123F87F117F">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 18:03:17 UTC</createdTime>
+<generatorID>27DEE469-40C5-17AF-AA59-0ED77A245870</generatorID>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,8,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VENTA_FECHA" id="7DDBFCE0-E9CC-8E82-A421-8C231E76E73C">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 18:03:17 UTC</createdTime>
+<generatorID>96C6DB76-0F77-1F7D-9640-690D4BBD8649</generatorID>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMPLEADO_EMPLEADO_ID" id="D5FFE716-1F11-7951-4EEE-0F28F261B396">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 18:03:17 UTC</createdTime>
+<generatorID>CB257232-5CAE-A16C-B2C3-03FB39F27248</generatorID>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="FB05FF99-BE0D-E8F2-3711-0259026F949C" referredColumn="AC91687D-F968-360F-B74A-16BADD3940E0"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="484B310D-F93D-90D6-C20D-FA8D0CD14442" name="VENTA_PK">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 18:03:17 UTC</createdTime>
+<generatorID>0ECD29AD-8F7B-7AE4-1634-8625A7C5E1D9</generatorID>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="32DC171F-DA7F-CAB3-43BC-0D24EA27DE7E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="14FEA45D-056C-E9C2-C368-9983E904D8E6" name="VENTA_EMPLEADO_FK">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 18:03:17 UTC</createdTime>
+<generatorID>7EC0114C-E92D-3DF1-244A-50BE6C4CADA3</generatorID>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D5FFE716-1F11-7951-4EEE-0F28F261B396"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

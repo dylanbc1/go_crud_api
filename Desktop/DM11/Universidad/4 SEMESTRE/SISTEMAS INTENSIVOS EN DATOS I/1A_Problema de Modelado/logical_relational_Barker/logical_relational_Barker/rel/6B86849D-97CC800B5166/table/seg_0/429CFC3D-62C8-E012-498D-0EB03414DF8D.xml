@@ -1,0 +1,113 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="429CFC3D-62C8-E012-498D-0EB03414DF8D" name="INGREDIENTE">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 03:51:37 UTC</createdTime>
+<generatorID>879811E7-DE45-247E-29B2-2821510AD04F</generatorID>
+<ownerDesignName>logical_relational_Barker</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="INGREDIENTE_ID" id="7515A640-25A2-3994-49B6-5A3F1D965039">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 03:51:37 UTC</createdTime>
+<generatorID>B53E29D8-0697-8605-3B4A-86A1CF81AEAE</generatorID>
+<ownerDesignName>logical_relational_Barker</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="INGREDIENTE_NOMBRE" id="1962551C-9B45-E77A-2FDB-99DC8C149B84">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 03:51:37 UTC</createdTime>
+<generatorID>30CEA5A5-769C-FCD8-6C25-7C726375B332</generatorID>
+<ownerDesignName>logical_relational_Barker</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="INGREDIENTE_COSTO_UNITARIO" id="A780D79B-846C-1425-5491-91564DBF47B2">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 03:51:37 UTC</createdTime>
+<generatorID>12D0C145-C028-17A3-5C82-F23CAFC4EE53</generatorID>
+<ownerDesignName>logical_relational_Barker</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,8,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="INGREDIENTE_CANTIDAD" id="986E0013-0B3C-E543-16FE-A4CAC91B02C3">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 03:51:37 UTC</createdTime>
+<generatorID>30932C67-597C-3F0A-80B2-7B43D097FD1F</generatorID>
+<ownerDesignName>logical_relational_Barker</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="INGREDIENTE_MEDIDA" id="88CBCABF-7720-CACD-4FE4-A6369E7BA813">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 03:51:37 UTC</createdTime>
+<generatorID>C1E697BB-CC11-9E3E-8897-9C36416F42B4</generatorID>
+<ownerDesignName>logical_relational_Barker</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LOCACIÓN_LOCACIÓN_ID" id="7A17F067-C5F4-7289-3259-6DB87244B057">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 03:51:37 UTC</createdTime>
+<generatorID>5DCDE346-6344-4B3B-4DF7-6E145D937BDB</generatorID>
+<ownerDesignName>logical_relational_Barker</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="20DF4E6B-F7BD-823B-E9A0-7C25BD9B847A" referredColumn="89F165D4-A674-71F4-F592-ECBD7B91691D"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="30A6B318-02A4-9020-4518-1FB75CC2109B" name="INGREDIENTE_PK">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 03:51:37 UTC</createdTime>
+<generatorID>96F555B9-7721-8ED7-9D51-819381587ECD</generatorID>
+<ownerDesignName>logical_relational_Barker</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7515A640-25A2-3994-49B6-5A3F1D965039"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9F99454A-B41B-39D7-38D2-CB4882953FF8" name="INGREDIENTE_LOCACIÓN_FK">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 03:51:37 UTC</createdTime>
+<generatorID>F2F9794F-9593-6CD4-189B-97392640C2A9</generatorID>
+<ownerDesignName>logical_relational_Barker</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7A17F067-C5F4-7289-3259-6DB87244B057"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

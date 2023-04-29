@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="INGREDIENTE_CATEGORÍA" directorySegmentName="seg_0" id="382F29FD-DB72-FF41-7B23-010FDC5DA7F8">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 16:00:33 UTC</createdTime>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<engineerTo>
+<item key="C6D4B4BD-1D2E-AAD0-5C65-2FF7D3CE7C3D" value="true"/>
+</engineerTo>
+<sourcePk>96F555B9-7721-8ED7-9D51-819381587ECD</sourcePk>
+<targetPk>C116F015-055C-728A-089F-C0AE68CC0227</targetPk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>879811E7-DE45-247E-29B2-2821510AD04F</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>885B0B7B-3268-88A3-0393-99971BA18224</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

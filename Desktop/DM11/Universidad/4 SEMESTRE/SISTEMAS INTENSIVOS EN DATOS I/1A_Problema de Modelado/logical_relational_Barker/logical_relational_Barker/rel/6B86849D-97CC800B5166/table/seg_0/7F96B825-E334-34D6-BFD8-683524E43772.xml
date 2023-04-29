@@ -1,0 +1,100 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="7F96B825-E334-34D6-BFD8-683524E43772" name="RECETA">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 03:51:37 UTC</createdTime>
+<generatorID>DF9441BF-F289-87D7-6DB3-7EC7BBE9299E</generatorID>
+<ownerDesignName>logical_relational_Barker</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="RECETA_ID" id="162AC226-C8A2-3885-E072-D6DCD5E1FB6C">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 03:51:37 UTC</createdTime>
+<generatorID>625D5D85-12ED-7157-8F70-42AE79EF28B6</generatorID>
+<ownerDesignName>logical_relational_Barker</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RECETA_CANTIDAD_INGREDIENTE" id="9B135C99-056E-2714-F801-FAFB0A4FC51C">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 03:51:37 UTC</createdTime>
+<generatorID>58AEA6C7-CADE-9BEE-80F1-9CDF90E9AE85</generatorID>
+<ownerDesignName>logical_relational_Barker</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RECETA_TIEMPO_PREPARACIÓN" id="5AEB3EF8-715F-E911-ED8D-15DBDB3CA7A8">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 03:51:37 UTC</createdTime>
+<generatorID>AAB1313E-3D1C-2BA8-17E5-240AA739E7C8</generatorID>
+<ownerDesignName>logical_relational_Barker</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,4,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRODUCTO_PRODUCTO_ID" id="438AEACB-9884-4163-616F-597D30CA4E1A">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 03:51:37 UTC</createdTime>
+<generatorID>F2B9C8B8-7F8B-C112-B019-33A3643329F8</generatorID>
+<ownerDesignName>logical_relational_Barker</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="56101EE7-7036-117E-5CA4-2A5B67F24664" referredColumn="0D42F218-F460-F528-2995-E96844607C4A"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E433C026-0A4F-0EC6-7197-9ABBFA1F6C9F" name="RECETA_PK">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 03:51:37 UTC</createdTime>
+<generatorID>D97D4D09-9BB4-D950-315B-705805EDF631</generatorID>
+<ownerDesignName>logical_relational_Barker</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="162AC226-C8A2-3885-E072-D6DCD5E1FB6C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="98D13552-C269-677E-8A0E-EB0845155750" name="RECETA__IDX">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 03:51:37 UTC</createdTime>
+<ownerDesignName>logical_relational_Barker</ownerDesignName>
+<indexState>Unique Plain Index</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<relationGeneratorID>6758FA16-D782-873C-393C-EAE951B0C43D</relationGeneratorID>
+<indexColumnUsage>
+<colUsage columnID="438AEACB-9884-4163-616F-597D30CA4E1A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="84121BFA-0F52-51D9-9032-912897833DA6" name="RECETA_PRODUCTO_FK">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 03:51:37 UTC</createdTime>
+<generatorID>6758FA16-D782-873C-393C-EAE951B0C43D</generatorID>
+<ownerDesignName>logical_relational_Barker</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="438AEACB-9884-4163-616F-597D30CA4E1A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

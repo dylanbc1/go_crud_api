@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="C6D980B3-9D8E-6A25-D7AA-EEE0C8A680D7" containerWithKeyObject="719D482D-38C0-3650-66A1-249BF374C1E7" localFKIndex="F4A4D450-E3A2-A5AD-A605-6BE56DA35C3E" name="INGREDIENTE_LOCACIÓN_FK">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 18:03:17 UTC</createdTime>
+<generatorID>F2F9794F-9593-6CD4-189B-97392640C2A9</generatorID>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<referredTableLongName>LOCACIÓN</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>B6359C5E-86F1-7EB4-D778-16E6E1A9354C</referredTableID>
+<keyObject>BA93EA0C-E06D-E6EF-9519-728A85EA87D5</keyObject>
+<referredKeyID>BA93EA0C-E06D-E6EF-9519-728A85EA87D5</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>LOCACIÓN_ID</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

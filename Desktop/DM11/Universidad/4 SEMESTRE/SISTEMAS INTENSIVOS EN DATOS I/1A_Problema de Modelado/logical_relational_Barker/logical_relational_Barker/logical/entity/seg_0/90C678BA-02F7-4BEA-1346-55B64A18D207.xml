@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="90C678BA-02F7-4BEA-1346-55B64A18D207" name="CLIENTE">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 03:35:28 UTC</createdTime>
+<ownerDesignName>logical_relational_Barker</ownerDesignName>
+<engineerTo>
+<item key="6B86849D-3ECF-51CC-C8EA-97CC800B5166" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="CLIENTE_ID" id="B3BADBBB-38F5-7595-8DBF-E7BA5FA73DDD">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 03:35:32 UTC</createdTime>
+<ownerDesignName>logical_relational_Barker</ownerDesignName>
+<engineerTo>
+<item key="6B86849D-3ECF-51CC-C8EA-97CC800B5166" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CLIENTE_NOMBRE" id="1CB526DF-C76D-1C75-599D-5A1DADECD0D9">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 03:35:50 UTC</createdTime>
+<ownerDesignName>logical_relational_Barker</ownerDesignName>
+<engineerTo>
+<item key="6B86849D-3ECF-51CC-C8EA-97CC800B5166" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CLIENTE_TELÉFONO" id="E3B35066-08B6-3FC0-5318-A5B1BD5971D9">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 03:36:02 UTC</createdTime>
+<ownerDesignName>logical_relational_Barker</ownerDesignName>
+<engineerTo>
+<item key="6B86849D-3ECF-51CC-C8EA-97CC800B5166" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="EMPLEADO_ID" id="7AA3DC7D-27FB-500F-613E-19D27CE43AF8">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 03:39:11 UTC</createdTime>
+<generatorID>46ABAD8B-E094-52FD-35EC-0BE65F2F7EC5</generatorID>
+<ownerDesignName>logical_relational_Barker</ownerDesignName>
+<engineerTo>
+<item key="6B86849D-3ECF-51CC-C8EA-97CC800B5166" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<referedAttribute>5727FC0A-DE1A-5C26-58F6-0DE1251F0E64</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="18ABF6DC-FB62-FEA2-75AC-58D4A6F87E5E" name="CLIENTE PK">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 03:35:49 UTC</createdTime>
+<ownerDesignName>logical_relational_Barker</ownerDesignName>
+<engineerTo>
+<item key="6B86849D-3ECF-51CC-C8EA-97CC800B5166" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>B3BADBBB-38F5-7595-8DBF-E7BA5FA73DDD</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

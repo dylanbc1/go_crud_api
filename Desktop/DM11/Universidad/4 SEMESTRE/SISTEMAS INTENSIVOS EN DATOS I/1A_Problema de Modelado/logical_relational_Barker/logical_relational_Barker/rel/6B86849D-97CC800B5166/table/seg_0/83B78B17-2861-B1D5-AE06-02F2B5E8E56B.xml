@@ -1,0 +1,96 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="83B78B17-2861-B1D5-AE06-02F2B5E8E56B" name="EMPLEADO">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 03:51:37 UTC</createdTime>
+<generatorID>60B1BD45-0D15-857F-A35A-A7439836B3E4</generatorID>
+<ownerDesignName>logical_relational_Barker</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="EMPLEADO_ID" id="BBE5D0F2-F0B4-4CEC-25BA-60F7C2F16D5D">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 03:51:37 UTC</createdTime>
+<generatorID>5727FC0A-DE1A-5C26-58F6-0DE1251F0E64</generatorID>
+<ownerDesignName>logical_relational_Barker</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMPLEADO_NOMBRE" id="F4B377A9-808C-7D03-8843-76E141754835">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 03:51:37 UTC</createdTime>
+<generatorID>18A8FA8C-7D41-2938-462C-AC4A227CD546</generatorID>
+<ownerDesignName>logical_relational_Barker</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMPLEADO_FECHA_CONTRATACIÓN" id="8279C1FF-DD30-7713-8BFE-89EFCAA8C64F">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 03:51:37 UTC</createdTime>
+<generatorID>29048F5B-640B-88F1-AEEF-F381B4EB8BFB</generatorID>
+<ownerDesignName>logical_relational_Barker</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMPLEADO_DIRECCIÓN" id="FE407EEC-1FB8-ACAA-1C8F-FFFB8E899854">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 03:51:37 UTC</createdTime>
+<generatorID>B0371E0A-8AE1-E95C-A561-235131F16DDF</generatorID>
+<ownerDesignName>logical_relational_Barker</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMPLEADO_TELÉFONO" id="D4F748C9-6855-4FD2-9D9E-C584C19826C6">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 03:51:37 UTC</createdTime>
+<generatorID>DC93C138-6CB2-D64A-2BAF-E1F2C3C8F0EA</generatorID>
+<ownerDesignName>logical_relational_Barker</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="08CDC99F-FCA4-FDE8-2273-836FE20023A1" name="EMPLEADO_PK">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 03:51:37 UTC</createdTime>
+<generatorID>A4836C44-2EB9-D265-C144-9D17315CDD24</generatorID>
+<ownerDesignName>logical_relational_Barker</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BBE5D0F2-F0B4-4CEC-25BA-60F7C2F16D5D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CF2402DA-075F-94AF-7BD7-1DF56EEFDE8A" name="EMPLEADO_EMPLEADO_TELÉFONO_UN">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 03:51:37 UTC</createdTime>
+<generatorID>1DB3CBCA-9638-4D0F-A255-8EF81BE5A855</generatorID>
+<ownerDesignName>logical_relational_Barker</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D4F748C9-6855-4FD2-9D9E-C584C19826C6"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

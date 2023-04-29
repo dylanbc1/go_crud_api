@@ -1,0 +1,50 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B6359C5E-86F1-7EB4-D778-16E6E1A9354C" name="LOCACIÓN">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 18:03:17 UTC</createdTime>
+<generatorID>8B70B179-5C35-A8BA-5A47-96DBD2A0F7E9</generatorID>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="LOCACIÓN_ID" id="C3593C61-D9A0-5956-C064-868C569CB0A5">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 18:03:17 UTC</createdTime>
+<generatorID>8ED5B9F8-365A-5F88-6576-6B00FA1E3048</generatorID>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LOCACIÓN_LUGAR" id="F2B19AD2-A0E9-5315-A581-BF568639ACFA">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 18:03:17 UTC</createdTime>
+<generatorID>6CA9EA53-216C-5E5A-7C3B-8EB9552EF2D5</generatorID>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="BA93EA0C-E06D-E6EF-9519-728A85EA87D5" name="LOCACIÓN_PK">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 18:03:17 UTC</createdTime>
+<generatorID>D7D02203-ADDB-1ABE-924D-BD7D995AF197</generatorID>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C3593C61-D9A0-5956-C064-868C569CB0A5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

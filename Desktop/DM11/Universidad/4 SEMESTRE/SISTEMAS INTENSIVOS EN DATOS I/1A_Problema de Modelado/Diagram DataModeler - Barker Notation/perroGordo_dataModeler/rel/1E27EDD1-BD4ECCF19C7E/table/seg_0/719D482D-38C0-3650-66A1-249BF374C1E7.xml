@@ -1,0 +1,113 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="719D482D-38C0-3650-66A1-249BF374C1E7" name="INGREDIENTE">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 18:03:17 UTC</createdTime>
+<generatorID>879811E7-DE45-247E-29B2-2821510AD04F</generatorID>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="INGREDIENTE_ID" id="A8B26D36-EE40-F431-B35C-EFBDFE8D4FDC">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 18:03:17 UTC</createdTime>
+<generatorID>B53E29D8-0697-8605-3B4A-86A1CF81AEAE</generatorID>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="INGREDIENTE_NOMBRE" id="6379620A-2D13-0920-C063-52B6E7A069D0">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 18:03:17 UTC</createdTime>
+<generatorID>30CEA5A5-769C-FCD8-6C25-7C726375B332</generatorID>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="INGREDIENTE_COSTO_UNITARIO" id="08ACAE7A-79BD-6818-130C-82E1421FEA0D">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 18:03:17 UTC</createdTime>
+<generatorID>12D0C145-C028-17A3-5C82-F23CAFC4EE53</generatorID>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,8,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="INGREDIENTE_CANTIDAD" id="3D053D6D-1F57-5283-EB28-40C4D8C699CA">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 18:03:17 UTC</createdTime>
+<generatorID>30932C67-597C-3F0A-80B2-7B43D097FD1F</generatorID>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="INGREDIENTE_MEDIDA" id="51E0D4DB-3F44-F3E2-ABB9-904311A47A48">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 18:03:17 UTC</createdTime>
+<generatorID>C1E697BB-CC11-9E3E-8897-9C36416F42B4</generatorID>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LOCACIÓN_LOCACIÓN_ID" id="37E26AAF-ADCC-4F95-F5BC-1CAB3AC09646">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 18:03:17 UTC</createdTime>
+<generatorID>5DCDE346-6344-4B3B-4DF7-6E145D937BDB</generatorID>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="C6D980B3-9D8E-6A25-D7AA-EEE0C8A680D7" referredColumn="C3593C61-D9A0-5956-C064-868C569CB0A5"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A000AEDE-EC6A-78B8-91E3-B007346A87AA" name="INGREDIENTE_PK">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 18:03:17 UTC</createdTime>
+<generatorID>96F555B9-7721-8ED7-9D51-819381587ECD</generatorID>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A8B26D36-EE40-F431-B35C-EFBDFE8D4FDC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F4A4D450-E3A2-A5AD-A605-6BE56DA35C3E" name="INGREDIENTE_LOCACIÓN_FK">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 18:03:17 UTC</createdTime>
+<generatorID>F2F9794F-9593-6CD4-189B-97392640C2A9</generatorID>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="37E26AAF-ADCC-4F95-F5BC-1CAB3AC09646"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

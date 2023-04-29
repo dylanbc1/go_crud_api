@@ -1,0 +1,129 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D9154FFE-9AD6-013B-1CE2-A3B85E8B4E30" name="VENTA">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 03:51:37 UTC</createdTime>
+<generatorID>16EDA903-7BED-CECE-3824-3612A32EE090</generatorID>
+<ownerDesignName>logical_relational_Barker</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="VENTA_ID" id="1C11DFB2-EB97-C663-BD86-F06E7B01A308">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 03:51:37 UTC</createdTime>
+<generatorID>0D54EDC4-1060-5971-8EEB-27A9099906D3</generatorID>
+<ownerDesignName>logical_relational_Barker</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VENTA_PRECIO_TOTAL" id="0798B605-D3F8-E022-F7FE-5E83E7C18D14">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 03:51:37 UTC</createdTime>
+<generatorID>27DEE469-40C5-17AF-AA59-0ED77A245870</generatorID>
+<ownerDesignName>logical_relational_Barker</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,8,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VENTA_FECHA" id="7C71C4B8-FE6E-2130-19D8-709CD47DDAA5">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 03:51:37 UTC</createdTime>
+<generatorID>96C6DB76-0F77-1F7D-9640-690D4BBD8649</generatorID>
+<ownerDesignName>logical_relational_Barker</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="VENTA_CANTIDAD_PRODUCTO" id="D9A9543A-4AB7-EB8C-5A7A-865653F3C5B3">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 03:51:37 UTC</createdTime>
+<generatorID>18628FCE-DB0B-24A3-6514-E33B16C43522</generatorID>
+<ownerDesignName>logical_relational_Barker</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>12</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,12,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMPLEADO_EMPLEADO_ID" id="20E7E187-7F5E-EB6C-DBCF-FDE2A4F92A11">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 03:51:37 UTC</createdTime>
+<generatorID>CB257232-5CAE-A16C-B2C3-03FB39F27248</generatorID>
+<ownerDesignName>logical_relational_Barker</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="11525013-4F03-B337-BF9D-FE99CDE6E5ED" referredColumn="BBE5D0F2-F0B4-4CEC-25BA-60F7C2F16D5D"/>
+</associations>
+</Column>
+<Column name="CLIENTE_CLIENTE_ID" id="F9E22D79-4A79-2687-7801-91984DEC8EF9">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 03:51:37 UTC</createdTime>
+<generatorID>B9BB719A-2873-488F-4F39-DD842371023B</generatorID>
+<ownerDesignName>logical_relational_Barker</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0743EB4A-B135-45E6-0BF3-1691520E1AA3" referredColumn="AF289D6A-A39E-1DC0-3256-8B6811CCA44D"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4671CB77-0347-D90F-D73A-7D91A592DE0D" name="VENTA_PK">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 03:51:37 UTC</createdTime>
+<generatorID>0ECD29AD-8F7B-7AE4-1634-8625A7C5E1D9</generatorID>
+<ownerDesignName>logical_relational_Barker</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="1C11DFB2-EB97-C663-BD86-F06E7B01A308"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2DCCE91D-ED6F-AD2A-195D-3F7FF656AE73" name="VENTA_CLIENTE_FK">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 03:51:37 UTC</createdTime>
+<generatorID>594011EC-F0DF-96CD-66DA-EA381FB6ECA1</generatorID>
+<ownerDesignName>logical_relational_Barker</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F9E22D79-4A79-2687-7801-91984DEC8EF9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="867A0D65-17DB-8612-D14F-77ECB9C3FF8B" name="VENTA_EMPLEADO_FK">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 03:51:37 UTC</createdTime>
+<generatorID>7EC0114C-E92D-3DF1-244A-50BE6C4CADA3</generatorID>
+<ownerDesignName>logical_relational_Barker</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="20E7E187-7F5E-EB6C-DBCF-FDE2A4F92A11"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

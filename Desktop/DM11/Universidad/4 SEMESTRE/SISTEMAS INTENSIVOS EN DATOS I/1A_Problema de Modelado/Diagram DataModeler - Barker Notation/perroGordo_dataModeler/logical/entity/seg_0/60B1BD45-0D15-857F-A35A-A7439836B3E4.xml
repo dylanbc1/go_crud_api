@@ -1,0 +1,109 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="60B1BD45-0D15-857F-A35A-A7439836B3E4" name="EMPLEADO">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-22 20:19:29 UTC</createdTime>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<engineerTo>
+<item key="C6D4B4BD-1D2E-AAD0-5C65-2FF7D3CE7C3D" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="EMPLEADO_ID" id="5727FC0A-DE1A-5C26-58F6-0DE1251F0E64">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-22 20:23:05 UTC</createdTime>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<engineerTo>
+<item key="C6D4B4BD-1D2E-AAD0-5C65-2FF7D3CE7C3D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="EMPLEADO_NOMBRE" id="18A8FA8C-7D41-2938-462C-AC4A227CD546">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-22 20:23:12 UTC</createdTime>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<engineerTo>
+<item key="C6D4B4BD-1D2E-AAD0-5C65-2FF7D3CE7C3D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="EMPLEADO_FECHA_CONTRATACIÓN" id="29048F5B-640B-88F1-AEEF-F381B4EB8BFB">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-22 20:24:28 UTC</createdTime>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<engineerTo>
+<item key="C6D4B4BD-1D2E-AAD0-5C65-2FF7D3CE7C3D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="EMPLEADO_DIRECCIÓN" id="B0371E0A-8AE1-E95C-A561-235131F16DDF">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-22 20:24:40 UTC</createdTime>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<engineerTo>
+<item key="C6D4B4BD-1D2E-AAD0-5C65-2FF7D3CE7C3D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="EMPLEADO_TELÉFONO" id="DC93C138-6CB2-D64A-2BAF-E1F2C3C8F0EA">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-22 20:25:04 UTC</createdTime>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<engineerTo>
+<item key="C6D4B4BD-1D2E-AAD0-5C65-2FF7D3CE7C3D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A4836C44-2EB9-D265-C144-9D17315CDD24" name="EMPLEADO PK">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-22 20:23:11 UTC</createdTime>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<engineerTo>
+<item key="C6D4B4BD-1D2E-AAD0-5C65-2FF7D3CE7C3D" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>5727FC0A-DE1A-5C26-58F6-0DE1251F0E64</attributeRef>
+</usedAttributes>
+</identifier>
+<identifier id="1DB3CBCA-9638-4D0F-A255-8EF81BE5A855" name="Key_2">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-22 20:48:15 UTC</createdTime>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<engineerTo>
+<item key="C6D4B4BD-1D2E-AAD0-5C65-2FF7D3CE7C3D" value="true"/>
+</engineerTo>
+<newElementsIDs>DC93C138-6CB2-D64A-2BAF-E1F2C3C8F0EA</newElementsIDs>
+<usedAttributes>
+<attributeRef>DC93C138-6CB2-D64A-2BAF-E1F2C3C8F0EA</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

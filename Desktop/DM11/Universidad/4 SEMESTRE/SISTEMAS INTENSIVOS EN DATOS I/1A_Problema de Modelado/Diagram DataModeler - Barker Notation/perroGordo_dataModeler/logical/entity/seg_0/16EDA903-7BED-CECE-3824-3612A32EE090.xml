@@ -1,0 +1,87 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="16EDA903-7BED-CECE-3824-3612A32EE090" name="VENTA">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-22 20:08:58 UTC</createdTime>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<engineerTo>
+<item key="C6D4B4BD-1D2E-AAD0-5C65-2FF7D3CE7C3D" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="VENTA_ID" id="0D54EDC4-1060-5971-8EEB-27A9099906D3">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-22 20:09:31 UTC</createdTime>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<engineerTo>
+<item key="C6D4B4BD-1D2E-AAD0-5C65-2FF7D3CE7C3D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="VENTA_PRECIO_TOTAL" id="27DEE469-40C5-17AF-AA59-0ED77A245870">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-22 20:10:08 UTC</createdTime>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<engineerTo>
+<item key="C6D4B4BD-1D2E-AAD0-5C65-2FF7D3CE7C3D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,8,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="VENTA_FECHA" id="96C6DB76-0F77-1F7D-9640-690D4BBD8649">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-22 20:15:16 UTC</createdTime>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<engineerTo>
+<item key="C6D4B4BD-1D2E-AAD0-5C65-2FF7D3CE7C3D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="EMPLEADO_ID" id="CB257232-5CAE-A16C-B2C3-03FB39F27248">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-22 23:34:33 UTC</createdTime>
+<generatorID>7EC0114C-E92D-3DF1-244A-50BE6C4CADA3</generatorID>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<engineerTo>
+<item key="C6D4B4BD-1D2E-AAD0-5C65-2FF7D3CE7C3D" value="true"/>
+</engineerTo>
+<referedAttribute>5727FC0A-DE1A-5C26-58F6-0DE1251F0E64</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="0ECD29AD-8F7B-7AE4-1634-8625A7C5E1D9" name="Venta PK">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-22 20:17:56 UTC</createdTime>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<engineerTo>
+<item key="C6D4B4BD-1D2E-AAD0-5C65-2FF7D3CE7C3D" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>0D54EDC4-1060-5971-8EEB-27A9099906D3</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

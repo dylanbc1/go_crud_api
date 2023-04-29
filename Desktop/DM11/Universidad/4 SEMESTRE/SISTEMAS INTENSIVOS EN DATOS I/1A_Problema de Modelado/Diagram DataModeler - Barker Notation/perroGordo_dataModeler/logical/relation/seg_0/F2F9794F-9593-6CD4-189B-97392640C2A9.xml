@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="LOCACIÓN_INGREDIENTE" directorySegmentName="seg_0" id="F2F9794F-9593-6CD4-189B-97392640C2A9">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-22 23:25:04 UTC</createdTime>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<engineerTo>
+<item key="C6D4B4BD-1D2E-AAD0-5C65-2FF7D3CE7C3D" value="true"/>
+</engineerTo>
+<sourcePk>D7D02203-ADDB-1ABE-924D-BD7D995AF197</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>8B70B179-5C35-A8BA-5A47-96DBD2A0F7E9</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>879811E7-DE45-247E-29B2-2821510AD04F</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

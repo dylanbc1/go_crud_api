@@ -1,0 +1,93 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1D56C5F0-195A-4070-20C0-ED5A3BFBAA70" name="FEEDBACK">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 18:03:17 UTC</createdTime>
+<generatorID>400EEA93-E20F-8811-D228-64C3BE5F2448</generatorID>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="FEEDBACK_CALIFICACIÓN" id="C559C4BB-D033-271E-4D5D-374BF1EC3603">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 18:03:17 UTC</createdTime>
+<generatorID>81D9B1B1-385A-E4B6-B5E4-2DC3EF6E6F43</generatorID>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FEEDBACK_FECHA" id="63A042DA-A583-2DFB-1FF1-AA414304EB42">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 18:03:17 UTC</createdTime>
+<generatorID>741213A4-EC80-98D2-EE7B-E32DDCF509AD</generatorID>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PRODUCTO_PRODUCTO_ID" id="E4006F9A-FFA1-B9F2-6B62-892F2C84DBCA">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 18:03:17 UTC</createdTime>
+<generatorID>07F998DB-AD15-06C1-A2BE-AEB826650F58</generatorID>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="BF89CB61-67E1-60A6-BF73-EAF13D81DEA9" referredColumn="81AAAA75-2A84-29B5-A208-AC72D7ED1BD7"/>
+</associations>
+</Column>
+<Column name="NOMBRE_CLIENTE" id="44FDBBB0-93EC-5FEA-EDC5-9A50DDA3CF96">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 18:03:17 UTC</createdTime>
+<generatorID>C7CD5A9E-E60E-D36B-1CD9-2D970AE05126</generatorID>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30 CHAR</dataTypeSize>
+<ownDataTypeParameters>30 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+<dependOnForeignKeyID>BF89CB61-67E1-60A6-BF73-EAF13D81DEA9</dependOnForeignKeyID>
+</Column>
+<Column name="TELÉFONO_CLIENTE" id="0F9349A5-078A-EC35-9116-CD542791E585">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 18:03:17 UTC</createdTime>
+<generatorID>2BE06DA6-459A-BF03-F92E-72073364FF1F</generatorID>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<isRelationshipColumn>true</isRelationshipColumn>
+<dependOnForeignKeyID>BF89CB61-67E1-60A6-BF73-EAF13D81DEA9</dependOnForeignKeyID>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="1BB6DB96-2A7E-B278-E75C-288D1660E263" name="FEEDBACK_PRODUCTO_FK">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 18:03:17 UTC</createdTime>
+<generatorID>BC33DE37-64B5-4E51-E1A7-E7D6DBD8FE5A</generatorID>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E4006F9A-FFA1-B9F2-6B62-892F2C84DBCA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

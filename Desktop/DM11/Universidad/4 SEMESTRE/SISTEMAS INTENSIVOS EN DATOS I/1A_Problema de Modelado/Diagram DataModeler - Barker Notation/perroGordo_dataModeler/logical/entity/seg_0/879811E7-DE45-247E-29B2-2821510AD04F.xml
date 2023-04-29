@@ -1,0 +1,113 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="879811E7-DE45-247E-29B2-2821510AD04F" name="INGREDIENTE">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-22 20:49:17 UTC</createdTime>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<engineerTo>
+<item key="1E27EDD1-F5B6-2131-65CB-BD4ECCF19C7E" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="INGREDIENTE_ID" id="B53E29D8-0697-8605-3B4A-86A1CF81AEAE">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-22 20:49:28 UTC</createdTime>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<engineerTo>
+<item key="1E27EDD1-F5B6-2131-65CB-BD4ECCF19C7E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="INGREDIENTE_NOMBRE" id="30CEA5A5-769C-FCD8-6C25-7C726375B332">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-22 20:49:43 UTC</createdTime>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<engineerTo>
+<item key="1E27EDD1-F5B6-2131-65CB-BD4ECCF19C7E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15 CHAR</dataTypeSize>
+<ownDataTypeParameters>15 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="INGREDIENTE_COSTO_UNITARIO" id="12D0C145-C028-17A3-5C82-F23CAFC4EE53">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-22 20:50:02 UTC</createdTime>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<engineerTo>
+<item key="1E27EDD1-F5B6-2131-65CB-BD4ECCF19C7E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>8</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,8,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="INGREDIENTE_CANTIDAD" id="30932C67-597C-3F0A-80B2-7B43D097FD1F">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-22 20:50:25 UTC</createdTime>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<engineerTo>
+<item key="1E27EDD1-F5B6-2131-65CB-BD4ECCF19C7E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="INGREDIENTE_MEDIDA" id="C1E697BB-CC11-9E3E-8897-9C36416F42B4">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-22 20:50:45 UTC</createdTime>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<engineerTo>
+<item key="1E27EDD1-F5B6-2131-65CB-BD4ECCF19C7E" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="LOCACIÓN_ID" id="5DCDE346-6344-4B3B-4DF7-6E145D937BDB">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-22 23:25:04 UTC</createdTime>
+<generatorID>F2F9794F-9593-6CD4-189B-97392640C2A9</generatorID>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<engineerTo>
+<item key="1E27EDD1-F5B6-2131-65CB-BD4ECCF19C7E" value="true"/>
+</engineerTo>
+<referedAttribute>8ED5B9F8-365A-5F88-6576-6B00FA1E3048</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10 CHAR</dataTypeSize>
+<ownDataTypeParameters>10 CHAR,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="96F555B9-7721-8ED7-9D51-819381587ECD" name="INGREDIENTE PK">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-22 20:49:42 UTC</createdTime>
+<ownerDesignName>perroGordo_dataModeler</ownerDesignName>
+<engineerTo>
+<item key="1E27EDD1-F5B6-2131-65CB-BD4ECCF19C7E" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>B53E29D8-0697-8605-3B4A-86A1CF81AEAE</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

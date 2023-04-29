@@ -1,0 +1,37 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="DETALLE_VENTA_VENTA" directorySegmentName="seg_0" id="84AED8DA-DBAC-03E0-6D3A-BA7CEC637216">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 01:35:11 UTC</createdTime>
+<ownerDesignName>logical_relational_Barker</ownerDesignName>
+<engineerTo>
+<item key="6B86849D-3ECF-51CC-C8EA-97CC800B5166" value="true"/>
+</engineerTo>
+<sourcePk>8E1D2F56-9C1F-9C87-3701-769B53619414</sourcePk>
+<targetPk>0ECD29AD-8F7B-7AE4-1634-8625A7C5E1D9</targetPk>
+<identifying>false</identifying>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>*</sourceCardinality>
+<sourceEntity>01F53A14-8CA8-33A1-3EFE-E531D91990BC</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>16EDA903-7BED-CECE-3824-3612A32EE090</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<attribute name="DESCUENTO" id="FE39344F-89DA-9407-0316-A8B3449CB147">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-04-23 03:37:20 UTC</createdTime>
+<ownerDesignName>logical_relational_Barker</ownerDesignName>
+<engineerTo>
+<item key="6B86849D-3ECF-51CC-C8EA-97CC800B5166" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>3</dataTypeScale>
+<ownDataTypeParameters>,5,3</ownDataTypeParameters>
+</attribute>
+</attributes>
+</Relation>
