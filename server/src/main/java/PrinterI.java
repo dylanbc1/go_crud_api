@@ -1,15 +1,15 @@
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Arrays;
 
 public class PrinterI implements Demo.Printer {
 
     public void printString(String msg, com.zeroc.Ice.Current current) {
-        System.out.println("llego mano: "+msg);
-
         String[] msg_parts = msg.split(" ");
 
         String real_msg = msg_parts[1];
+
         try {
             int num = Integer.parseInt(real_msg);
             prime_factors(num);
@@ -23,8 +23,7 @@ public class PrinterI implements Demo.Printer {
                 real_msg_parts = real_msg.split("listifs");
                 msg_type = "listifs";
             } else if(real_msg.contains("listports")){
-                real_msg_parts = real_msg.split("listports");
-                System.out.println(real_msg_parts.length);
+                real_msg_parts = (real_msg + msg_parts[2]).split("listports");
                 msg_type = "listports";
             } else if(real_msg.contains("!")){
                 real_msg_parts = real_msg.split("!");
@@ -34,13 +33,10 @@ public class PrinterI implements Demo.Printer {
                 valid_msg = false;
             }
 
-            System.out.println(real_msg_parts.length);
-
             if(valid_msg){
                 if(verify_msg(real_msg_parts, msg_type)){
                     execute_command(real_msg_parts, msg_type);
                 } else {
-                    System.out.println("aqui ups");
                     System.out.println("Ups! Type a valid message");
                 }
             }
@@ -70,24 +66,23 @@ public class PrinterI implements Demo.Printer {
             case "listifs":
                 return (real_msg_parts.length == 0);
             case "listports":
-                if(real_msg_parts.length == 1){
-                    return (real_msg_parts[0].split(" ").length == 1);
+            case "!":
+                if(real_msg_parts.length == 2){
+                    return (real_msg_parts[1].split(" ").length == 1);
                 } else {
                     return false;
                 }
-            case "!":
-                if(real_msg_parts.length == 1){
-                    return real_msg_parts[0].split(" ").length == 0;
-                } else {
-                 return false;
-                }
+
+            default:
+                return false;
         }
 
+        /*
         if(real_msg_parts[0].equalsIgnoreCase("")){
             return true;
         } else {
             return false;
-        }
+        }*/
     }
 
     private void execute_command(String[] real_msg_parts, String msg_type){
@@ -95,10 +90,10 @@ public class PrinterI implements Demo.Printer {
             if(msg_type.equalsIgnoreCase("listifs")){
                 command("ifconfig");
             } else if(msg_type.equalsIgnoreCase("listports")){
-                String ip = real_msg_parts[0].split(" ")[0];
+                String ip = real_msg_parts[1].split(" ")[0];
                 command("nmap " + ip);
             } else {
-                command(real_msg_parts[0]);
+                command(real_msg_parts[1]);
             }
         } catch (IOException ex) {
             throw new RuntimeException(ex);

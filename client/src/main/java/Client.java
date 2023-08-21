@@ -16,7 +16,7 @@ public class Client {
 
                 while (!msg.equals("exit")){
                     msg = reader.nextLine();
-                    chatManagerPrx.printString(username+"/"+hostname+": "+msg);
+                    chatManagerPrx.printString(username+":"+hostname+" "+msg);
                 }
             } catch (Exception e) {
                 e.printStackTrace();
