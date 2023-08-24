@@ -9,15 +9,15 @@ public class Client {
             // twoway añadido, debe esperar respuesta
             Demo.PrinterPrx chatManagerPrx = Demo.PrinterPrx
                     .checkedCast(communicator.propertyToProxy("Printer.Proxy")).ice_twoway();
-
+            
             try {
                 String hostname = Inet4Address.getLocalHost().getHostName();
                 String msg = "";
                 String username = System.getProperty("user.name");
 
                 while (!msg.equals("exit")){
-                    msg = reader.nextLine();
-                    chatManagerPrx.printString(username+":"+hostname+" "+msg);
+                    msg = reader.nextLine().trim();
+                    msg = chatManagerPrx.printString(username+":"+hostname+" "+msg);
                     System.out.println(username+":"+hostname+" "+msg);
                 }
             } catch (Exception e) {
