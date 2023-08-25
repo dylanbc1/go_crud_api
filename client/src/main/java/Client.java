@@ -20,12 +20,11 @@ public class Client {
                 String username = System.getProperty("user.name");
 
                 while (!msg.equalsIgnoreCase("exit")){
-                    System.out.println("Type the command (if you want to test the throughput of that command, type THR at the end)");
                     String user_msg = reader.nextLine().trim();
 
                     Long start = System.currentTimeMillis();
                     sent_request += 1;
-                   
+
                     msg = chatManagerPrx.printString(username+":"+hostname+" "+ user_msg);
 
                     if(user_msg.equalsIgnoreCase("exit")){
@@ -34,7 +33,6 @@ public class Client {
 
                     String latency_response = "\nLatency (response): " + (System.currentTimeMillis() - start) + "ms";
                     String requests = "\nSent requests (by this client): " + sent_request;
-                    
                     System.out.println(username + ":" + hostname + "\n"
                             + msg + latency_response + requests + "\n");
                 }

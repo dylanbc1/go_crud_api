@@ -4,7 +4,6 @@ import com.zeroc.Ice.Current;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Timer;
 
 public class PrinterI implements Demo.Printer {
     // añadimos communicator para cerrar el server
@@ -22,7 +21,8 @@ public class PrinterI implements Demo.Printer {
         requests_received += 1;
 
         System.out.println("\nExecuting -> " + msg);
-            
+        start_time = System.currentTimeMillis();
+
         String[] msg_parts = msg.split(" ");
 
         if(msg_parts.length == 1){
