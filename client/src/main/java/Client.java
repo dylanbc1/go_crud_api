@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class Client {
     public static void main(String[] args) {
         Scanner reader = new Scanner(System.in);
+        int sent_request = 0;
 
         try (com.zeroc.Ice.Communicator communicator = com.zeroc.Ice.Util.initialize(args, "client.cfg")) {
 
@@ -22,6 +23,7 @@ public class Client {
                     String user_msg = reader.nextLine().trim();
 
                     Long start = System.currentTimeMillis();
+                    sent_request += 1;
 
                     msg = chatManagerPrx.printString(username+":"+hostname+" "+ user_msg);
 
@@ -29,8 +31,10 @@ public class Client {
                         break;
                     }
 
-                    String latency_response = "Latency (response): " + (System.currentTimeMillis() - start) + "ms";
-                    System.out.println(username + ":" + hostname + "\n" + msg + "\n" + latency_response + "\n");
+                    String latency_response = "\nLatency (response): " + (System.currentTimeMillis() - start) + "ms";
+                    String requests = "\nSent requests (by this client): " + sent_request;
+                    System.out.println(username + ":" + hostname + "\n"
+                            + msg + latency_response + requests + "\n");
                 }
             } catch (Exception e) {
                 e.printStackTrace();

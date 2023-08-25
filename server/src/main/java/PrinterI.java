@@ -10,12 +10,16 @@ public class PrinterI implements Demo.Printer {
     Communicator communicator;
     long start_time;
     long latency_process;
+    int requests_received;
+    int requests_answered;
 
     PrinterI(Communicator communicator){
         this.communicator = communicator;
     }
 
     public String printString(String msg, Current current) {
+        requests_received += 1;
+
         System.out.println("\nExecuting -> " + msg);
         start_time = System.currentTimeMillis();
 
@@ -23,7 +27,8 @@ public class PrinterI implements Demo.Printer {
 
         if(msg_parts.length == 1){
             latency_process = System.currentTimeMillis() - start_time;
-            return ("Ups! Type a valid message" + get_latency_process());
+            requests_answered += 1;
+            return ("Ups! Type a valid message" + get_performance());
         }
 
         if(msg_parts[1].equalsIgnoreCase("exit")){
@@ -34,9 +39,17 @@ public class PrinterI implements Demo.Printer {
 
         try {
             Long num = Long.parseLong(real_msg);
+
+            if(num < 0){
+                latency_process = System.currentTimeMillis() - start_time;
+                requests_answered += 1;
+                return ("Ups! Type a positive number" + get_performance());
+            }
+
             String prime = prime_factors(num);
             latency_process = System.currentTimeMillis() - start_time;
-            return prime + get_latency_process();
+            requests_answered += 1;
+            return prime + get_performance();
         } catch (NumberFormatException e){
             String[] real_msg_parts = null;
             String msg_type = "";
@@ -63,22 +76,26 @@ public class PrinterI implements Demo.Printer {
             } else if(real_msg.equalsIgnoreCase("exit")){
                 msg_type = "exit";
             } else {
+                requests_answered += 1;
                 latency_process = System.currentTimeMillis() - start_time;
-                return ("Ups! Type a valid message" + get_latency_process());
+                return ("Ups! Type a valid message" + get_performance());
             }
 
             if(!msg_type.equalsIgnoreCase("exit")){
                 if(verify_msg(real_msg_parts, msg_type)){
+                    requests_answered += 1;
                     return execute_command(real_msg_parts, msg_type);
                 } else {
+                    requests_answered += 1;
                     latency_process = System.currentTimeMillis() - start_time;
-                    return ("Ups! Type a valid message") + get_latency_process();
+                    return ("Ups! Type a valid message") + get_performance();
                 }
             }
         }
 
+        requests_answered += 1;
         latency_process = System.currentTimeMillis() - start_time;
-        return ("Ups! Type a valid message" + get_latency_process());
+        return ("Ups! Type a valid message" + get_performance());
     }
 
     public String prime_factors(Long num){
@@ -147,7 +164,19 @@ public class PrinterI implements Demo.Printer {
             result += resultExecution + "\n";
         }
 
-        return (result + get_latency_process());
+        return (result + get_performance());
+    }
+
+    private String get_performance(){
+        return get_requestes_received() + get_requests_answered() + get_latency_process();
+    }
+
+    private String get_requests_answered(){
+        return ("\nRequests answered (server): " + requests_answered);
+    }
+
+    private String get_requestes_received(){
+        return ("\nRequests received (server): " + requests_received);
     }
 
     private String get_latency_process(){
