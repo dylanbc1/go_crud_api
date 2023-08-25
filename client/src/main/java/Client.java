@@ -31,7 +31,7 @@ public class Client {
                         break;
                     }
 
-                    String latency_response = "\nLatency (response): " + (System.currentTimeMillis() - start) + "ms";
+                    String latency_response = "\nLatency (response | less the 1000ms of testing throughput): " + (System.currentTimeMillis() - start - 1000) + "ms";
                     String requests = "\nSent requests (by this client): " + sent_request;
                     System.out.println(username + ":" + hostname + "\n"
                             + msg + latency_response + requests + "\n");

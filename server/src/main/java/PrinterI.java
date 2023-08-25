@@ -12,6 +12,7 @@ public class PrinterI implements Demo.Printer {
     long latency_process;
     int requests_received;
     int requests_answered;
+    String msg;
 
     PrinterI(Communicator communicator){
         this.communicator = communicator;
@@ -19,6 +20,7 @@ public class PrinterI implements Demo.Printer {
 
     public String printString(String msg, Current current) {
         requests_received += 1;
+        this.msg = msg;
 
         System.out.println("\nExecuting -> " + msg);
         start_time = System.currentTimeMillis();
@@ -40,10 +42,10 @@ public class PrinterI implements Demo.Printer {
         try {
             Long num = Long.parseLong(real_msg);
 
-            if(num < 0){
+            if(num <= 0){
                 latency_process = System.currentTimeMillis() - start_time;
                 requests_answered += 1;
-                return ("Ups! Type a positive number" + get_performance());
+                return ("Ups! Type a valid number" + get_performance());
             }
 
             String prime = prime_factors(num);
@@ -110,14 +112,12 @@ public class PrinterI implements Demo.Printer {
         for (int i = 3; i <= Math.sqrt(num); i += 2) {
             while (num % i == 0) {
                 msg += i + " ";
-                // System.out.println(i + " ");
                 num /= i;
             }
         }
 
         if (num > 2) {
             msg += num;
-            // System.out.println(num);
         }
 
         return msg;
@@ -164,11 +164,12 @@ public class PrinterI implements Demo.Printer {
             result += resultExecution + "\n";
         }
 
+        latency_process = System.currentTimeMillis() - start_time;
         return (result + get_performance());
     }
 
     private String get_performance(){
-        return get_requestes_received() + get_requests_answered() + get_latency_process();
+        return get_requestes_received() + get_requests_answered() + get_latency_process() + get_throughput();
     }
 
     private String get_requests_answered(){
@@ -181,5 +182,109 @@ public class PrinterI implements Demo.Printer {
 
     private String get_latency_process(){
         return ("\nLatency (process): " + latency_process +  "ms");
+    }
+
+    private String get_throughput() {
+        long start_time = System.currentTimeMillis();
+        int executed_commands = 0;
+        String r;
+
+        while (true) {
+            // Simular el procesamiento del comando por parte del servidor
+            r = printString2(msg);
+            if (System.currentTimeMillis() - start_time >= 1000) {
+                break;
+            }
+            executed_commands++;
+        }
+
+        return ("\nThroughput (of this command): " + executed_commands);
+    }
+
+    // testing throughput
+    public String printString2(String msg) {
+        String[] msg_parts = msg.split(" ");
+
+        if(msg_parts.length == 1){
+            return ("Ups! Type a valid message");
+        }
+
+        String real_msg = msg_parts[1];
+
+        try {
+            Long num = Long.parseLong(real_msg);
+
+            if(num <= 0){
+                return ("Ups! Type a valid number");
+            }
+
+            return prime_factors(num);
+        } catch (NumberFormatException e){
+            String[] real_msg_parts = null;
+            String msg_type = "";
+
+            if(real_msg.startsWith("listifs")){
+                real_msg_parts = real_msg.split("listifs");
+                msg_type = "listifs";
+            } else if(real_msg.startsWith("listports")){
+                real_msg_parts = (real_msg + msg_parts[2]).split("listports");
+                msg_type = "listports";
+            } else if(real_msg.startsWith("!")){
+                if(msg_parts.length >= 3) {
+                    String acc = "";
+
+                    for (int i = 2; i < msg_parts.length; i++){
+                        acc = (real_msg + " " + msg_parts[i]);
+                    }
+
+                    real_msg_parts = acc.split("!");
+                } else {
+                    real_msg_parts = (real_msg).split("!");
+                }
+                msg_type = "!";
+            } else if(real_msg.equalsIgnoreCase("exit")){
+                msg_type = "exit";
+            } else {
+                return ("Ups! Type a valid message");
+            }
+
+            if(!msg_type.equalsIgnoreCase("exit")){
+                if(verify_msg(real_msg_parts, msg_type)){
+                    return execute_command2(real_msg_parts, msg_type);
+                } else {
+                    return ("Ups! Type a valid message");
+                }
+            }
+        }
+        return ("Ups! Type a valid message");
+    }
+
+    // testing throughput
+    private String execute_command2(String[] real_msg_parts, String msg_type){
+        try {
+            if(msg_type.equalsIgnoreCase("listifs")){
+                return command2("ifconfig");
+            } else if(msg_type.equalsIgnoreCase("listports")){
+                String ip = real_msg_parts[1].split(" ")[0];
+                return command2("nmap " + ip);
+            } else {
+                return command2(real_msg_parts[1]);
+            }
+        } catch (IOException ex) {
+            throw new RuntimeException(ex);
+        }
+    }
+
+    // testing throughput
+    private String command2(String command) throws IOException {
+        String result = "";
+        Process process = Runtime.getRuntime().exec(command);
+        BufferedReader br = new BufferedReader(new InputStreamReader(process.getInputStream()));
+        String resultExecution;
+        while ((resultExecution = br.readLine()) != null) {
+            result += resultExecution + "\n";
+        }
+
+        return (result);
     }
 }
