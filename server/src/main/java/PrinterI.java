@@ -1,4 +1,5 @@
 import com.zeroc.Ice.Communicator;
+import com.zeroc.Ice.Current;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -8,16 +9,22 @@ public class PrinterI implements Demo.Printer {
     // añadimos communicator para cerrar el server
     Communicator communicator;
     long start_time;
+    long latency_process;
 
     PrinterI(Communicator communicator){
         this.communicator = communicator;
     }
 
-    public String printString(String msg, com.zeroc.Ice.Current current) {
+    public String printString(String msg, Current current) {
         System.out.println("\nExecuting -> " + msg);
         start_time = System.currentTimeMillis();
 
         String[] msg_parts = msg.split(" ");
+
+        if(msg_parts.length == 1){
+            latency_process = System.currentTimeMillis() - start_time;
+            return ("Ups! Type a valid message" + get_latency_process());
+        }
 
         if(msg_parts[1].equalsIgnoreCase("exit")){
             communicator.shutdown();
@@ -26,47 +33,55 @@ public class PrinterI implements Demo.Printer {
         String real_msg = msg_parts[1];
 
         try {
-            int num = Integer.parseInt(real_msg);
-            return prime_factors(num);
-
+            Long num = Long.parseLong(real_msg);
+            String prime = prime_factors(num);
+            latency_process = System.currentTimeMillis() - start_time;
+            return prime + get_latency_process();
         } catch (NumberFormatException e){
-            boolean valid_msg = true;
             String[] real_msg_parts = null;
             String msg_type = "";
 
-            if(real_msg.contains("listifs")){
+            if(real_msg.startsWith("listifs")){
                 real_msg_parts = real_msg.split("listifs");
                 msg_type = "listifs";
-            } else if(real_msg.contains("listports")){
+            } else if(real_msg.startsWith("listports")){
                 real_msg_parts = (real_msg + msg_parts[2]).split("listports");
                 msg_type = "listports";
-            } else if(real_msg.contains("!")){
-                if(msg_parts.length == 3) {
-                    real_msg_parts = (real_msg + " " + msg_parts[2]).split("!");
-                } else if(msg_parts.length == 2){
+            } else if(real_msg.startsWith("!")){
+                if(msg_parts.length >= 3) {
+                    String acc = "";
+
+                    for (int i = 2; i < msg_parts.length; i++){
+                        acc = (real_msg + " " + msg_parts[i]);
+                    }
+
+                    real_msg_parts = acc.split("!");
+                } else {
                     real_msg_parts = (real_msg).split("!");
                 }
                 msg_type = "!";
             } else if(real_msg.equalsIgnoreCase("exit")){
                 msg_type = "exit";
             } else {
-                System.out.println("Ups! Type a valid message");
-                valid_msg = false;
+                latency_process = System.currentTimeMillis() - start_time;
+                return ("Ups! Type a valid message" + get_latency_process());
             }
 
-            if(valid_msg && !msg_type.equalsIgnoreCase("exit")){
+            if(!msg_type.equalsIgnoreCase("exit")){
                 if(verify_msg(real_msg_parts, msg_type)){
                     return execute_command(real_msg_parts, msg_type);
                 } else {
-                    return ("Ups! Type a valid message");
+                    latency_process = System.currentTimeMillis() - start_time;
+                    return ("Ups! Type a valid message") + get_latency_process();
                 }
             }
         }
 
-        return ("Ups! Type a valid message");
+        latency_process = System.currentTimeMillis() - start_time;
+        return ("Ups! Type a valid message" + get_latency_process());
     }
 
-    public String prime_factors(int num){
+    public String prime_factors(Long num){
         String msg = "";
 
         while (num % 2 == 0) {
@@ -88,7 +103,6 @@ public class PrinterI implements Demo.Printer {
             // System.out.println(num);
         }
 
-        finished();
         return msg;
     }
 
@@ -107,13 +121,6 @@ public class PrinterI implements Demo.Printer {
             default:
                 return false;
         }
-
-        /*
-        if(real_msg_parts[0].equalsIgnoreCase("")){
-            return true;
-        } else {
-            return false;
-        }*/
     }
 
     private String execute_command(String[] real_msg_parts, String msg_type){
@@ -133,19 +140,17 @@ public class PrinterI implements Demo.Printer {
 
     private String command(String command) throws IOException {
         String result = "";
-        Process process = Runtime.getRuntime().exec("cmd /c" + command);
+        Process process = Runtime.getRuntime().exec(command);
         BufferedReader br = new BufferedReader(new InputStreamReader(process.getInputStream()));
         String resultExecution;
         while ((resultExecution = br.readLine()) != null) {
             result += resultExecution + "\n";
         }
-        finished();
-        return result;
+
+        return (result + get_latency_process());
     }
 
-    private void finished(){
-        long final_time = System.currentTimeMillis();
-        long latency = final_time - start_time;
-        System.out.println("Latency: " + latency +  "ms");
+    private String get_latency_process(){
+        return ("\nLatency (process): " + latency_process +  "ms");
     }
 }
