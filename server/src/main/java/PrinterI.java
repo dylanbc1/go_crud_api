@@ -42,7 +42,7 @@ public class PrinterI implements Demo.Printer {
         try {
             Long num = Long.parseLong(real_msg);
 
-            if(num <= 0){
+            if(num <= 0 || msg_parts.length >= 3){
                 latency_process = System.currentTimeMillis() - start_time;
                 requests_answered += 1;
                 return ("Ups! Type a valid number" + get_performance());
