@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="5C4A1CB6-1AD6-1DC2-4599-09569D253A1E" containerWithKeyObject="A8051825-CC07-B588-A80F-7D736E5C8619" localFKIndex="291D091F-DBCA-5AE8-46C2-A77D1A98A832" name="AUTHENTICATION_DONANTE_FK">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-09-08 23:43:48 UTC</createdTime>
+<generatorID>5E67F7A5-126E-71B2-0CBA-D879C7AAD4CA</generatorID>
+<ownerDesignName>sse-modelo-integrador</ownerDesignName>
+<referredTableLongName>DONANTE</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>054A73A3-B0D3-BB76-43AE-A555A6BEBEC9</referredTableID>
+<keyObject>66DC77B1-F84C-EEC2-D7AE-5B5CC7FF428D</keyObject>
+<referredKeyID>66DC77B1-F84C-EEC2-D7AE-5B5CC7FF428D</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>DONANTE_CODIGO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

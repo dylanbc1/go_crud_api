@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="DCF3DB22-03DA-B16E-DBE3-B819FAE19F93" containerWithKeyObject="38497B6D-64CC-402E-B820-C508994BCEFF" localFKIndex="E8040334-D551-7C3C-AAC6-EA637F7997AC" name="ALERTA_TIPO_ALERTA_FK">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-09-03 14:49:44 UTC</createdTime>
+<generatorID>417C48A2-490E-0AC4-8492-1F4A5AD19264</generatorID>
+<ownerDesignName>sse-modelo-integrador</ownerDesignName>
+<referredTableLongName>TIPO_ALERTA</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>B92E25EF-4FC0-EE9B-5BB5-3D22BB8E052C</referredTableID>
+<keyObject>EFDAD7E9-8CA5-92F3-AAE5-BCA3FEBD0B10</keyObject>
+<referredKeyID>EFDAD7E9-8CA5-92F3-AAE5-BCA3FEBD0B10</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>TIPO_ALERTA_CODIGO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

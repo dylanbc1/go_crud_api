@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="5B88D93A-1B06-E705-665B-FD8529611B43" containerWithKeyObject="38497B6D-64CC-402E-B820-C508994BCEFF" localFKIndex="4700D06E-51E4-A88E-B622-F3117872BDFF" name="ALERTA_COLABORADOR_FK">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-09-03 14:49:44 UTC</createdTime>
+<generatorID>CFF87314-23FA-B2DA-71E2-3103725ACFEE</generatorID>
+<ownerDesignName>sse-modelo-integrador</ownerDesignName>
+<referredTableLongName>COLABORADOR</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>80C29BC4-DC8E-F95B-E990-BE608B1258CC</referredTableID>
+<keyObject>83E6705B-AF32-44C3-75EC-C9FB9DE7009F</keyObject>
+<referredKeyID>83E6705B-AF32-44C3-75EC-C9FB9DE7009F</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>COLABRADOR_CODIGO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

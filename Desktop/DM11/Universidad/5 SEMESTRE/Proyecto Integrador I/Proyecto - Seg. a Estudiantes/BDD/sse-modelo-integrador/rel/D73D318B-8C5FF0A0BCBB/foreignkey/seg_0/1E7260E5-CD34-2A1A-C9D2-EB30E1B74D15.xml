@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="1E7260E5-CD34-2A1A-C9D2-EB30E1B74D15" containerWithKeyObject="B4FB0C6C-F8CA-A3D1-6F92-2F1A0895BB98" localFKIndex="C809C915-9A48-DCAD-5051-CFC6B8AA3848" name="REPORTE_MIEMBRO_FILANTROPIA_FK">
+<createdBy>Dylan</createdBy>
+<createdTime>2023-09-03 14:49:44 UTC</createdTime>
+<generatorID>02735C3B-0A0E-E93B-A882-BC58CBC8D83F</generatorID>
+<ownerDesignName>sse-modelo-integrador</ownerDesignName>
+<referredTableLongName>MIEMBRO_FILANTROPIA</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>6337A5DF-D5B6-DF7C-D2F2-78C155CB73AA</referredTableID>
+<keyObject>7DD7EB9F-6581-E1C7-DEE6-72B0FA72CAA7</keyObject>
+<referredKeyID>7DD7EB9F-6581-E1C7-DEE6-72B0FA72CAA7</referredKeyID>
+<mandatory>false</mandatory>
+<refColNames>MIEMBRO_FILANTROPIA_CODIGO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
