@@ -1,19 +1,30 @@
 plugins {
-    id 'java'
+    id 'com.zeroc.gradle.ice-builder.slice' version '1.4.5' apply false
 }
+subprojects {
+    apply plugin: 'java'
+    apply plugin: 'com.zeroc.gradle.ice-builder.slice'
+    
+    slice {
+        java {
+            files = [file("../Printer.ice")]
+        }
+    }
 
-group 'org.example'
-version '1.0-SNAPSHOT'
+    repositories {
+        mavenCentral()
+    }
 
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
-}
-
-test {
-    useJUnitPlatform()
+    dependencies {
+        implementation 'com.zeroc:ice:3.7.9'
+    }
+    jar {
+        manifest {
+            attributes(
+                "Main-Class" : project.name.capitalize(),
+                "Class-Path": configurations.runtimeClasspath.resolve().collect {
+                it.toURI() }.join(' ')
+            )
+        }
+    }
 }
