@@ -15,11 +15,11 @@ func main() {
 	r := gin.Default() // es el motor de Gin
 	// que es el enrutador principal
 
-	r.GET("/espacios", controllers.PlacesGet)
 	r.POST("/espacios", controllers.PlacesCreate)
-	// hasta aqui llega la función anónima con parámetro
-	// c gin.Context que me da el contexto e información de la
-	// solicitud HTTP y permite obtener datos y responder
-
+	r.GET("/espacios", controllers.PlacesGet)
+	r.GET("/espacios/:id", controllers.PlacesGetById)
+	r.PUT("/espacios/:id", controllers.PlacesUpdate)
+	r.DELETE("/espacios/:id", controllers.PlacesDelete)
+	
 	r.Run()
 }
