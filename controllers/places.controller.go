@@ -1,6 +1,8 @@
 package controllers
 
 import (
+	"fmt"
+
 	"github.com/dylanbc1/go_crud_api/initializers"
 	"github.com/dylanbc1/go_crud_api/models"
 	"github.com/gin-gonic/gin"
@@ -20,14 +22,14 @@ func PlacesDelete(c *gin.Context) {
 	c.Status(200)
 }
 
-func PlacesUpdate(c * gin.Context){
+func PlacesUpdate(c *gin.Context) {
 	// obtener ID de parámetros de la URL
 	id := c.Param("id")
 
 	// obtener datos del body
 	var body struct {
-		Name string
-		Capacity int 
+		Name     string
+		Capacity int
 	}
 
 	c.Bind(&body)
@@ -38,13 +40,13 @@ func PlacesUpdate(c * gin.Context){
 	initializers.DB.First(&place, id)
 
 	if place.ID == 0 {
-		c.JSON(400, gin.H {
+		c.JSON(404, gin.H{
 			"message": "Not found",
 		})
 	} else {
 		// updatearlo
 		initializers.DB.Model(&place).Updates(models.Place{
-			Name: body.Name,
+			Name:     body.Name,
 			Capacity: body.Capacity,
 		})
 
@@ -68,7 +70,7 @@ func PlacesGetById(c *gin.Context) {
 
 	// retornar
 	if place.ID == 0 {
-		c.JSON(400, gin.H {
+		c.JSON(400, gin.H{
 			"message": "Not found",
 		})
 	} else {
@@ -93,13 +95,14 @@ func PlacesGet(c *gin.Context) {
 func PlacesCreate(c *gin.Context) {
 	// obtener los datos del req body
 	var body struct {
-		Name string
-		Capacity int 
+		Name     string
+		Capacity int
 	}
 
 	c.Bind(&body)
 
 	// crear un espacio
+	fmt.Println(body.Capacity)
 	place := models.Place{Name: body.Name, Capacity: body.Capacity}
 	result := initializers.DB.Create(&place)
 
